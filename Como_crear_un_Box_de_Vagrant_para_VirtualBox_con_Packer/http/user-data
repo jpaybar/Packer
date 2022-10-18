@@ -1,0 +1,21 @@
+#cloud-config
+autoinstall:
+  version: 1
+  early-commands:
+  - systemctl stop ssh # We prevent Packer from trying to connect and exceeding the maximum number of attempts.
+  locale: en_US
+  keyboard:
+    layout: en
+  identity:
+    hostname: ubuntu
+    password: '$6$xzsJvkg10l$/MR33d6N0hKXj23Mlb7xustF5i2TzA1iQt9gErJysQxnANBHUyeUdyc.paED1gB0tIx5XPG2Zic4BLygr1Z2a/'
+    username: vagrant
+    realname: "Juan M. Payan"
+  ssh:
+    install-server: yes
+    allow-pw: yes
+  storage:
+    layout:
+      name: lvm
+  proxy: http://10.40.50.60:8080 # In the case of being behind a proxy, but it will only work with apt, necessary ("http_proxy": "{{env `http_proxy`}}") to declare the ENV VAR in the json file, for a environment proxy.
+  
