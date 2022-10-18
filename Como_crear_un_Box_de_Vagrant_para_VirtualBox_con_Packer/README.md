@@ -526,7 +526,7 @@ PS C:> vagrant up; vagrant ssh;
 
 Y estaremos logados en nuestro Box de Vagrant:
 
-![box_logon.PNG](C:\LABO\vagrant\PACKER\Como_crear_un_Box_de_Vagrant_para_VirtualBox_con_Packer\box_logon.PNG)
+![box_logon.PNG](https://github.com/jpaybar/Packer/blob/main/Como_crear_un_Box_de_Vagrant_para_VirtualBox_con_Packer/box_logon.PNG)
 
 
 
