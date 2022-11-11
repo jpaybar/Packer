@@ -375,7 +375,7 @@ $ENV:https_proxy="http://10.40.50.60:8080"
 
 ```bash
 export http_proxy="http://10.40.50.60:8080"
-export https_proxy="http://10.40.56.3:8080"
+export https_proxy="http://10.40.50.60:8080"
 ```
 
 En la sección `providers` definimos "http_proxy={{user \`http_proxy\`}}" de esta forma si la variable `http_proxy` la tenemos a su vez en la sección `variables` como "{{env \`http_proxy\`}}" donde la palabra reservada `env` indica que la variable es de entorno y la variable de entorno está configurada en nuestro Host, la variable de tipo `user` de la sección `providers` tomará dicho valor y podremos realizar conexiones a través de nuestro proxy corporativo.
